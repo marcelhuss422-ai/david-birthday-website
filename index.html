@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0423)https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/project/pr_AXpiYQI8hTlZ/tool_router_session/trs_zK8jwAY4uZmp/g57jFqM_zS7M?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7685aa30fee07632b83ea58979a398d0%2F20260611%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260611T203130Z&X-Amz-Expires=3600&X-Amz-Signature=f9cea728ad20a6e699bccb59d473462ce6cce31e6007fee99f22da430fef0521&X-Amz-SignedHeaders=host -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alles Gute zum Geburtstag David!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="./Alles Gute zum Geburtstag David!_files/css2" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -141,6 +140,7 @@
             box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
             text-decoration: none;
             justify-content: flex-start;
+            position: relative;
         }
 
         .wish-button.amazon {
@@ -151,6 +151,20 @@
         .wish-button.xxxlutz {
             background: linear-gradient(135deg, #DC143C, #B22222);
             box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+        }
+
+        /* Preis-Badge für Buttons */
+        .price-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .wish-button:hover {
@@ -293,6 +307,10 @@
             .contact-btn {
                 width: 200px;
             }
+
+            .price-badge {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
@@ -323,16 +341,46 @@
         <div class="card">
             <h2 class="section-title">🎁 DEINE GEBURTSTAGS-WUNSCHLISTE 🎁</h2>
             <div class="wishlist-grid">
-                <a href="https://www.more-nutrition.de/products/try-me-bundle" target="_blank" class="wish-button">🎁 Try Me Bundle</a>
-                <a href="https://morenutrition.de/products/more-premium-aqua-bottle?variant=51123368558756" target="_blank" class="wish-button">🧋 More Protein Shaker</a>
-                <a href="https://www.more-nutrition.de/products/total-protein-chunky-flavour-strawberry" target="_blank" class="wish-button">🍬 Chunky Flavour Strawberry</a>
-                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094748070052" target="_blank" class="wish-button">🍪 Chunky Flavour Dark Cookie</a>
-                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094752854180" target="_blank" class="wish-button">🥛 Chunky Flavour Milchreis Zimt</a>
-                <a href="https://morenutrition.de/products/zerup-zero-sirup?variant=51137535082768" target="_blank" class="wish-button">⚡ Zerup+ White Boost</a>
-                <a href="https://www.amazon.de/dp/B00YUIM2J0?m=A3JWKAKR8XB7XF" target="_blank" class="wish-button amazon">📦 Amazon Produkt</a>
-                <a href="https://www.xxxlutz.de/p/sodastream-wassersprudler-crystal-inkl-3-flaschen-006128003001" target="_blank" class="wish-button xxxlutz">🥤 SodaStream Crystal 3.0</a>
-                <a href="https://www.mcfit.com/de/mitgliedschaft/" target="_blank" class="wish-button">✨ Gym-Abo</a>
-                <a href="https://morenutrition.de/products/more-protein-milkshake?variant=51094754787492" target="_blank" class="wish-button">🥤 More Protein Milkshake Style</a>
+                <a href="https://www.more-nutrition.de/products/try-me-bundle" target="_blank" class="wish-button">
+                    🎁 Try Me Bundle
+                    <span class="price-badge">29,99€</span>
+                </a>
+                <a href="https://morenutrition.de/products/more-premium-aqua-bottle?variant=51123368558756" target="_blank" class="wish-button">
+                    🧋 More Protein Shaker
+                    <span class="price-badge">24,99€</span>
+                </a>
+                <a href="https://www.more-nutrition.de/products/total-protein-chunky-flavour-strawberry" target="_blank" class="wish-button">
+                    🍬 Chunky Flavour Strawberry
+                    <span class="price-badge">39,99€</span>
+                </a>
+                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094748070052" target="_blank" class="wish-button">
+                    🍪 Chunky Flavour Dark Cookie
+                    <span class="price-badge">39,99€</span>
+                </a>
+                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094752854180" target="_blank" class="wish-button">
+                    🥛 Chunky Flavour Milchreis Zimt
+                    <span class="price-badge">39,99€</span>
+                </a>
+                <a href="https://morenutrition.de/products/zerup-zero-sirup?variant=51137535082768" target="_blank" class="wish-button">
+                    ⚡ Zerup+ White Boost
+                    <span class="price-badge">19,99€</span>
+                </a>
+                <a href="https://www.amazon.de/dp/B00YUIM2J0?m=A3JWKAKR8XB7XF" target="_blank" class="wish-button amazon">
+                    📦 Amazon Produkt
+                    <span class="price-badge">15,00€</span>
+                </a>
+                <a href="https://www.xxxlutz.de/p/sodastream-wassersprudler-crystal-inkl-3-flaschen-006128003001" target="_blank" class="wish-button xxxlutz">
+                    🥤 SodaStream Crystal 3.0
+                    <span class="price-badge">89,99€</span>
+                </a>
+                <a href="https://www.mcfit.com/de/mitgliedschaft/" target="_blank" class="wish-button">
+                    ✨ Gym-Abo
+                    <span class="price-badge">19,90€</span>
+                </a>
+                <a href="https://morenutrition.de/products/more-protein-milkshake?variant=51094754787492" target="_blank" class="wish-button">
+                    🥤 More Protein Milkshake Style
+                    <span class="price-badge">34,99€</span>
+                </a>
             </div>
             <div class="link-hint">💡 Klicke auf einen Button, um das Produkt direkt anzusehen!</div>
         </div>
@@ -350,7 +398,7 @@
 
         <!-- Zusammenfassung -->
         <div class="card">
-            <div class="summary-price">Gesamtwert der Wunschliste: 239,20 €</div>
+            <div class="summary-price">Gesamtwert der Wunschliste: 354,82 €</div>
             <div class="summary-text">Aber jedes einzelne Geschenk würde mich riesig freuen 😊</div>
         </div>
 
@@ -365,7 +413,7 @@
 
         <!-- Kontakt -->
         <div class="card">
-            <h2 class="contact-title">📞 KONTAKT & BEWERTUNG 📞</h2>
+            <h2 class="contact-title">📞 KONTAKT &amp; BEWERTUNG 📞</h2>
             <div class="phone-number">151 514 972 652</div>
             <div class="summary-text">Ruf mich gerne an oder schreib mir eine SMS!</div>
             <div class="contact-buttons">
@@ -374,5 +422,6 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+
+</body></html>
