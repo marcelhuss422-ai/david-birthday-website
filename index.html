@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alles Gute zum Geburtstag David!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050B18;
+            color: white;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #0D1628;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Spezielle Dankbarkeits-Box */
+        .gratitude-card {
+            background: linear-gradient(135deg, #1a4c7a, #2d5aa0);
+            border: 2px solid #40E0D0;
+            box-shadow: 0 8px 32px rgba(64, 224, 208, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gratitude-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(64, 224, 208, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        .gratitude-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero-emojis {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF8C00, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        .hero-title::before,
+        .hero-title::after {
+            content: '🎂';
+            position: absolute;
+            font-size: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hero-title::before {
+            left: -60px;
+        }
+
+        .hero-title::after {
+            right: -60px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        /* Wunschliste */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #FFD700;
+        }
+
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .wish-button {
+            background: linear-gradient(135deg, #4A90E2, #8A2BE2);
+            border: none;
+            border-radius: 15px;
+            padding: 15px 20px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+            text-decoration: none;
+            justify-content: flex-start;
+        }
+
+        .wish-button.amazon {
+            background: linear-gradient(135deg, #FF9500, #FF6B35);
+            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+        }
+
+        .wish-button.xxxlutz {
+            background: linear-gradient(135deg, #DC143C, #B22222);
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+        }
+
+        .wish-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+            background: linear-gradient(135deg, #5BA0F2, #9A3BF2);
+        }
+
+        .wish-button.amazon:hover {
+            box-shadow: 0 8px 25px rgba(255, 149, 0, 0.4);
+            background: linear-gradient(135deg, #FFB035, #FF7B45);
+        }
+
+        .wish-button.xxxlutz:hover {
+            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.4);
+            background: linear-gradient(135deg, #FF1650, #D23242);
+        }
+
+        .wish-button:active {
+            transform: translateY(0);
+        }
+
+        /* Neuer Link-Hinweis */
+        .link-hint {
+            font-size: 0.9rem;
+            color: #40E0D0;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Dankbarkeits-Box spezielle Styles */
+        .gratitude-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #40E0D0;
+            margin-bottom: 25px;
+            text-shadow: 0 0 20px rgba(64, 224, 208, 0.5);
+        }
+
+        .gratitude-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #E0F8FF;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Zusammenfassung */
+        .summary-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #40E0D0;
+            margin-bottom: 15px;
+        }
+
+        .summary-text {
+            font-size: 1.1rem;
+            color: #B0B0B0;
+        }
+
+        /* Dankeskarte */
+        .thanks-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF8C00;
+            margin-bottom: 25px;
+        }
+
+        .thanks-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #E0E0E0;
+            margin-bottom: 15px;
+        }
+
+        /* Kontakt */
+        .contact-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 25px;
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #40E0D0;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            border: none;
+            border-radius: 15px;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(50, 205, 50, 0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(50, 205, 50, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title::before,
+            .hero-title::after {
+                display: none;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .wishlist-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                gap: 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="card">
+            <div class="hero-emojis">🎉🎂✨</div>
+            <h1 class="hero-title">ALLES GUTE ZUM<br>GEBURTSTAG DAVID!</h1>
+            <div class="hero-subtitle">🎉 HERZLICHEN GLÜCKWUNSCH! 🎉</div>
+        </div>
+
+        <!-- Wunschliste -->
+        <div class="card">
+            <h2 class="section-title">🎁 DEINE GEBURTSTAGS-WUNSCHLISTE 🎁</h2>
+            <div class="wishlist-grid">
+                <a href="https://www.more-nutrition.de/products/try-me-bundle" target="_blank" class="wish-button">🎁 Try Me Bundle</a>
+                <a href="https://morenutrition.de/products/more-premium-aqua-bottle?variant=51123368558756" target="_blank" class="wish-button">🧋 More Protein Shaker</a>
+                <a href="https://www.more-nutrition.de/products/total-protein-chunky-flavour-strawberry" target="_blank" class="wish-button">🍬 Chunky Flavour Strawberry</a>
+                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094748070052" target="_blank" class="wish-button">🍪 Chunky Flavour Dark Cookie</a>
+                <a href="https://morenutrition.de/products/chunky-flavour?variant=51094752854180" target="_blank" class="wish-button">🥛 Chunky Flavour Milchreis Zimt</a>
+                <a href="https://morenutrition.de/products/zerup-zero-sirup?variant=51137535082768" target="_blank" class="wish-button">⚡ Zerup+ White Boost</a>
+                <a href="https://www.amazon.de/dp/B00YUIM2J0?m=A3JWKAKR8XB7XF" target="_blank" class="wish-button amazon">📦 Amazon Produkt</a>
+                <a href="https://www.xxxlutz.de/p/sodastream-wassersprudler-crystal-inkl-3-flaschen-006128003001" target="_blank" class="wish-button xxxlutz">🥤 SodaStream Crystal 3.0</a>
+                <a href="https://www.mcfit.com/de/mitgliedschaft/" target="_blank" class="wish-button">✨ Gym-Abo</a>
+                <a href="https://morenutrition.de/products/more-protein-milkshake?variant=51094754787492" target="_blank" class="wish-button">🥤 More Protein Milkshake Style</a>
+            </div>
+            <div class="link-hint">💡 Klicke auf einen Button, um das Produkt direkt anzusehen!</div>
+        </div>
+
+        <!-- Neue Dankbarkeits-Box -->
+        <div class="card gratitude-card">
+            <div class="gratitude-content">
+                <h2 class="gratitude-title">💝 WICHTIGE NACHRICHT 💝</h2>
+                <div class="gratitude-text">
+                    Ihr müsst nicht alles kaufen!<br>
+                    Ich bin für alles dankbar! ❤️
+                </div>
+            </div>
+        </div>
+
+        <!-- Zusammenfassung -->
+        <div class="card">
+            <div class="summary-price">Gesamtwert der Wunschliste: 239,20 €</div>
+            <div class="summary-text">Aber jedes einzelne Geschenk würde mich riesig freuen 😊</div>
+        </div>
+
+        <!-- Dankeskarte -->
+        <div class="card">
+            <h2 class="thanks-title">🧡 Von Herzen DANKE! 🧡</h2>
+            <div class="thanks-text">Das sind nur Ideen und Wünsche.</div>
+            <div class="thanks-text">Es muss natürlich nicht alles davon sein!</div>
+            <div class="thanks-text">Ich bin dankbar für alles, was ihr mir schenken werdet ❤️</div>
+            <div class="thanks-text">🎂 DANKE, dass ihr meinen Geburtstag so besonders macht! 🎂</div>
+        </div>
+
+        <!-- Kontakt -->
+        <div class="card">
+            <h2 class="contact-title">📞 KONTAKT & BEWERTUNG 📞</h2>
+            <div class="phone-number">151 514 972 652</div>
+            <div class="summary-text">Ruf mich gerne an oder schreib mir eine SMS!</div>
+            <div class="contact-buttons">
+                <a href="tel:+4915151497652" class="contact-btn">📞 Jetzt anrufen</a>
+                <a href="sms:+4915151497652" class="contact-btn">💬 SMS schreiben</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
